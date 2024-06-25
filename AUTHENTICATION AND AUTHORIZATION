@@ -1,7 +1,15 @@
-How can I write a perfect  Laravel's authentication and authorization features?
-Tabnine
-Tabnine + Mistral
-To write a perfect Laravel's authentication and authorization features, you should follow these steps and guidelines:
+
+#############################################
+1.
+Use the auth and authorize helper functions:
+2.
+Define your policies:
+3.
+Apply middleware to your routes:
+4.
+Apply policies to your routes:
+###########################################
+
 
 1.
 Use the auth and authorize helper functions:
@@ -17,6 +25,7 @@ Use the middleware method to apply middleware to your routes. This can help you 
 4.
 Apply policies to your routes:
 Use the authorize method to apply policies to your routes. This can help you enforce authorization for your routes.
+###########################################################
 
 
 Here's an example of a perfect define for Laravel's authentication and authorization features:
