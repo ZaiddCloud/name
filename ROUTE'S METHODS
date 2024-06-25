@@ -1,0 +1,74 @@
+
+In a Laravel application, there are several types of route methods, middleware, and other methods related to routing. Here's a full list of all methods, along with examples:
+
+1.
+Route Methods:
+get: Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+post: Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+put: Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+patch: Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+delete: Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+options: Route::options('/products', [ProductController::class, 'options'])->name('products.options');
+head: Route::head('/products', [ProductController::class, 'head'])->name('products.head');
+any: Route::any('/products/{product}', [ProductController::class, 'any'])->name('products.any');
+2.
+Route Method Modifiers:
+name: ->name('products.index');
+as: ->as('products.index');
+3.
+Route Group Methods:
+middleware: ->middleware('auth');
+prefix: ->prefix('admin');
+namespace: ->namespace('Admin');
+4.
+Route Group Method Modifiers:
+group: ->group(function () {});
+5.
+Controller Method Modifiers:
+controller: ->controller(ProductsController::class);
+6.
+Middleware Methods:
+auth: Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+guest: Route::get('/login', [AuthController::class, 'login'])->middleware('guest');
+can: Route::get('/admin', [AdminController::class, 'index'])->middleware('can:admin');
+7.
+Other Routing-Related Methods:
+redirect: return redirect()->route('products.index');
+url: return url('/products');
+action: return action('App\Http\Controllers\ProductsController@index');
+route: return route('products.index');
+routeName: return routeName('products.index');
+8.
+API Resources:
+apiResource: Route::apiResource('products', ProductController::class);
+apiResource with custom routes: Route::apiResources(['products' => ProductController::class], ['only' => ['index', 'show']]);
+9.
+API Sources:
+apiSource: Route::apiSource('products', ProductController::class);
+10.
+Singleton:
+singleton: Route::get('/cache', function () {    return app('cache');     })->name('cache.index');
+
+
+11.
+Other Methods:
+fallback: Route::fallback(function () {    return view('errors.404');     });
+getSignedUrl: $url = Storage::getSignedUrl('files/example.jpg', now()->addHour());
+getSymlinkTarget: $target = Storage::getSymlinkTarget('files/example.jpg');
+getSymlinks: $symlinks = Storage::getSymlinks('files');
+getUrl: $url = Storage::getUrl('files/example.jpg');
+getUrlBuilder: $url = Storage::getUrlBuilder('files/example.jpg');
+getValidDriverNames: $drivers = Storage::getValidDriverNames();
+getWritableDriverNames: $drivers = Storage::getWritableDriverNames();
+link: Storage::link('files/example.jpg', 'public/example.jpg');
+putFile: Storage::putFile('files/example.jpg', $file);
+putString: Storage::putString('files/example.txt', 'Hello, World!');
+read: $content = Storage::read('files/example.txt');
+readFile: $content = Storage::readFile('files/example.jpg');
+readSymlink: $content = Storage::readSymlink('files/example.jpg');
+size: $size = Storage::size('files/example.jpg');
+temporaryUrl: $url = Storage::temporaryUrl('files/example.jpg', now()->addMinute());
+url: $url = Storage::url('files/example.jpg');
+
+
+This is a full list of all methods related to routing, API resources, API sources, and storage in a Laravel application. You can customize it according to your project's requirements.

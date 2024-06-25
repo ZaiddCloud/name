@@ -1,0 +1,93 @@
+
+
+//            1.
+//            Create a new model file:
+//                Use the php artisan make:model ModelName command to generate a new model file.
+//            Replace "ModelName" with the desired name for your model.
+//            2.
+//            Define the model's namespace:
+//            Models should be placed in the app/Models directory.
+//            The namespace for the model should be App\Models.
+//            3.
+//            Define the model's table:
+//            Use the $table property to specify the table name for the model.
+//            If the table name is different from the model's name, you can specify it using the $table property.
+//            4.
+//            Define the model's primary key:
+//            Use the $primaryKey property to specify the primary key for the model.
+//            By default, Laravel assumes the primary key is "id". If it's different, you should specify it using the $primaryKey property.
+//            5.
+//            Define the model's relationships:
+//            Use the belongsTo, hasOne, belongsToMany, hasMany, and morphToMany methods to define relationships between your model and other models.
+//            6.
+//            Define the model's attributes:
+//            Use the $fillable property to specify the attributes that are mass-assignable.
+//            Use the $guarded property to specify the attributes that are protected from mass assignment.
+//            7.
+//            Define the model's accessors and mutators:
+//            Use the getAttribute and setAttribute methods to define custom getters and setters for your model's attributes.
+//            8.
+//            Define the model's events:
+//            Use the boot method to listen for model events such as creating, created, updating, updated, deleting, and deleted.
+//            9.
+//            Define the model's scopes:
+//            Use the scope method to define custom scopes for your model's queries.
+//            10.
+//            Define the model's queries:
+//            Use the where, whereIn, whereNotIn, whereNull, whereNotNull, whereBetween, whereDate, whereMonth, whereYear, whereDay, whereTime, whereRaw, and other query builder methods to define custom queries for your model.
+
+
+
+Here's an example of a perfect model for Laravel:
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    use HasFactory;
+
+    protected $table = 'products';
+
+    protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'stock',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function getFormattedPriceAttribute()
+    {
+        return '€' . number_format($this->price, 2, ',', ' ');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->created_at = now();
+        });
+
+        static::updating(function ($model) {
+            $model->updated_at = now();
+        });
+    }
+
+    public static function scopeActive($query)
+    {
+        return $query->where('status', 'active');
+    }
+}
+
+This is a basic example of a perfect model for Laravel. You can customize it according to your project's requirements.
