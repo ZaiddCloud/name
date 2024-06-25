@@ -3,6 +3,15 @@ Tabnine
 Tabnine + Mistral
 To write a perfect define for the controller's actions with using the request object, validate method, and most of the response methods, you should follow these steps and guidelines:
 
+###########################################
+1.
+Use the request object to access the HTTP request data:
+2.
+Use the validate method:
+3.
+Use Laravel's response classes:
+#########################################
+
 1.
 Use the request object to access the HTTP request data:
 Use the request object to access the request data in your controller's actions.
@@ -12,7 +21,7 @@ Use the validate method to validate the request data. This method is part of Lar
 3.
 Use Laravel's response classes:
 Use the json, redirect, back, route, and other response methods to return the appropriate response for your controller's actions.
-
+#######################################################
 
 Here's an example of a perfect define for the controller's actions with using the request object, validate method, and most of the response methods:
 <?php
