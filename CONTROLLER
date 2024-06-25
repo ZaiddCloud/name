@@ -1,8 +1,26 @@
-Zaza
-how can i write a perfect controller for laravel
-Tabnine
-Tabnine + Mistral
 To write a perfect controller for Laravel, you should follow these steps and guidelines:
+
+
+#################################################
+1.
+Create a new controller file:
+2.
+Define the controller's namespace:
+3.
+Define the controller's routes:
+4.
+Define the controller's actions:
+5.
+Use Laravel's HTTP request classes:
+6.
+Use Laravel's response classes:
+7.
+Use Laravel's authentication and authorization features:
+8.
+Use Laravel's middleware:
+9.
+Use Laravel's policies:
+##############################################
 
 1.
 Create a new controller file:
