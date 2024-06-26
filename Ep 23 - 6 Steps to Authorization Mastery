@@ -93,7 +93,7 @@ Authorization: (23)
                     @endcan
 
 
- Recommendation:
+ 3- Recommendation:
     If you're building something relatively simple, the Gate Facade is fine,
     open your AppServiceProvider, define a few gates, and you could to go.
     For anything a little bit larger, I would 100% recommend sticking with policies
@@ -102,6 +102,4 @@ Authorization: (23)
 
 
             }
-
-  we want to make a user license to have a good job, there must be a relationship between the model and the user
 
