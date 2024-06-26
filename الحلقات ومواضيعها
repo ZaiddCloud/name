@@ -1,0 +1,27 @@
+1-6 الفيو
+7-15 المودل
+
+16-23 الكنترولر: (Authorization,  ,form & CSRF, Validate, Route, Authintcate, Login & Registratio)
+
+
+24 Emial
+25 Queues
+26 from scratch
+#########################################
+
+Validate: controller & view (17-18):
+controller:
+	authorize
+	validate
+	(create-update,...actions)
+	persis
+	redirect
+view:
+	@error('object')
+		{{message}}
+	@enderror
+#############################
+
+Route Tips: (19)
+
+Authenticate: (20)
