@@ -1,0 +1,107 @@
+
+Authorization: (23)
+   1- Relationships between the model and the user (01:00)
+   2- model controller:
+        edit action:
+            public function edit() {
+
+            Gate::define('action-model edit-job', function(User $user, Job $job) {
+                return $job->employer->user->is($user);
+            });
+
+            // 1- Inline authorization(02:05)
+                if (Auth::guest()) {
+                return redirect ('/login');
+                }
+                if ($job->employer->user->isNot(Auth::user())) {
+                    abort (403);
+                }
+            // 2- Gate (05:44)
+
+                        Gate::define('action-model edit-job', function(User $user, Job $job) {
+                            return $job->employer->user->is($user);
+                        });
+
+                        // 1- Inline authorization(02:05)
+                        if (Auth::guest()) {
+                        return redirect ('/login');
+                        }
+
+                        Gate::authorize('edit-job', $job);
+
+                        return view('job.edit', ['job' => $job]);
+
+            // 3- Define Gates Inside AppServiceProvider(08:40)
+
+                // in AppServiceProvider class:
+                    public function boot():void
+                    {
+                      Gate::define('action-model edit-job', function(User $user, Job $job) {
+                        return $job->employer->user->is($user);
+                      });
+                    }
+                // in model controller class:
+
+                public function edit() {
+                    Gate::authorize('edit-job', $job);
+
+                    return view('job.edit', ['job' => $job]);
+                }
+
+            // 4- Can, Can not(10:17)
+
+                $model->can()
+                Determine if the entity has the given abilities
+                    public function edit() {
+                        Gate::authorize('edit-job', $job);
+
+                        return view('job.edit', ['job' => $job]);
+                    }
+
+                    // in show view:
+                    @can('edit-job', $job)
+                    @endcan
+
+            // 5- Middleware Authorization
+
+
+            // 6- Policies
+
+                php artisan make:policy
+                JobPolicy
+                Job
+
+                // in AppServiceProvider class:
+                      public function boot():void
+                          {
+                          // Gate::define('action-model edit-job', function(User $user, Job $job) {
+                          // return $job->employer->user->is($user);
+                          // });
+                          }
+                // in JobPolicy class
+                    public function edit(User $user, Job $job): bool
+                    {
+                        return $job->employer->user->is($user);
+                    }
+                // in web.php
+                    Route::get('/job/{job}/edit', [JobController::class, 'edit'])
+                        ->middleware('auth')
+                        ->can('edit', 'job')
+
+                // in show view
+                    @can('edit', $job)
+                    @endcan
+
+
+ Recommendation:
+    If you're building something relatively simple, the Gate Facade is fine,
+    open your AppServiceProvider, define a few gates, and you could to go.
+    For anything a little bit larger, I would 100% recommend sticking with policies
+    and by the way, this is what I do for laracast.
+
+
+
+            }
+
+  we want to make a user license to have a good job, there must be a relationship between the model and the user
+
