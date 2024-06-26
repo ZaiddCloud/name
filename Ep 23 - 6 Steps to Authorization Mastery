@@ -5,10 +5,6 @@ Authorization: (23)
         edit action:
             public function edit() {
 
-            Gate::define('action-model edit-job', function(User $user, Job $job) {
-                return $job->employer->user->is($user);
-            });
-
             // 1- Inline authorization(02:05)
                 if (Auth::guest()) {
                 return redirect ('/login');
