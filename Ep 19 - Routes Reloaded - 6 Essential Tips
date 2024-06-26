@@ -1,0 +1,16 @@
+00:00:35.559 --> 00:00:38.310 align:start position:100%
+ Route Model Binding
+أولاً، ربط نموذج المسار
+- لذا اعمل على فتح ملف المسارات الخاص بك  وقم بالتمرير لأسفل إلى إجراء العرض هذا
+00:04:43.950 --> 00:04:43.960 align:start position:100%
+Controller::Class
+ 
+
+00:09:31.670 --> 00:09:31.680 align:start position:100%
+Route::View
+ 10:23
+List Routes 
+11:30
+Route Group
+12:38
+Route Resources
