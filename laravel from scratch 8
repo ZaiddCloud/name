@@ -1,0 +1,13 @@
+Ep 23:
+Route
+get model with slug.
+//in model class
+public function getRouteKeyName()
+{
+return 'slug'
+}
+
+
+Ep 30:
+Eager load
+ protected $with = ['category', 'author'];
