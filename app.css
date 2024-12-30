@@ -1,0 +1,133 @@
+/* تعريف الخطوط المخصصة */
+
+/* خطوط النسخ */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kufyan&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Amor+Al+Muhayyar&display=swap'); */
+
+
+/* خطوط الرقعة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Aljazeera:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Damascus&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thabit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;900&display=swap');
+
+
+/* خطوط الفارسي */
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Aljazeera:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Damascus&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* resources/css/app.css */
+
+
+
+.sub-book {
+    background-color: #f0f4f8; /* لون الخلفية للكتاب الفرعي */
+    border-left: 4px solid #0366d6;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    /* font-family: 'Rakkas', sans-serif;  */
+    /* خط مخصص للكتاب الفرعي */
+}
+
+.bab {
+    background-color: #e6fffa; /* لون الخلفية للباب */
+    border-left: 4px solid #159957;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    /* font-family: 'Amiri', serif;  */
+    /* خط مخصص للباب */
+}
+
+.issue {
+    background-color: #fff5ba; /* لون الخلفية للمسألة */
+    border-left: 4px solid #f8b400;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    /* font-family: 'Harmattan', sans-serif; */
+     /* خط مخصص للمسألة */
+}
+
+.paragraph {
+    background-color: #fff0f6; /* لون الخلفية للفقرة */
+    border-left: 4px solid #d63384;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    /* font-family: 'KFGQPC Uthman Taha Naskh'; /* خط مخصص للفقرة */
+    /* src: url('KFGQPC\ Uthman\ Taha\ Naskh\ Regular.ttf') format('ttf'),  */
+}
+
+.default {
+    background-color: #ffffff; /* لون الخلفية الافتراضي */
+    border-left: 4px solid #000000;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Tajawal', sans-serif; /* خط افتراضي */
+}
+
+/* إضافة تأثيرات الانتقال والتحول */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.sub-book, .bab, .issue, .paragraph, .default {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sub-book:hover, .bab:hover, .issue:hover, .paragraph:hover, .default:hover {
+    transform: translateX(0.5rem);
+    background-color: #f9fafb;
+}
+
+.handle {
+    will-change: transform, opacity;
+    transform: translateX(0);
+}
+
+
